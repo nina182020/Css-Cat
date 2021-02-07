@@ -1,0 +1,356 @@
+:root {
+    --shadow : rgba(255, 255, 255, 0.473);
+    --solid : rgb(46, 113, 150);
+}
+* {
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+body {
+    background-color: rgb(37, 38, 43);
+    /* this background pattern "Starry night" courtesy of projects.verou.me/css3patterns/ */
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    color: white;
+}
+
+header {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+}
+.corner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 0px 0px 100% 0px;
+    padding: 5px;
+    color: black;
+}
+.set {
+    position: absolute;
+    top: 220px;
+    left: 150px;
+    width: 60%;
+    height: 60%;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-bottom: 45px solid white;
+    box-shadow: 0px -10px 20px 0px rgb(181, 189, 191);
+}
+.box {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.466);
+    
+}
+.box::before {
+    position: absolute;
+    content: 'Click me!';
+    top: 20px;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(64, 224, 208, 0.61);
+    text-align: center;
+    line-height: 80px;
+}
+.cat {
+    position: absolute;
+    top: 280px;
+    left: 180px;
+    transform: scale(1);
+}
+
+    /* cat pieces */
+.piece {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+.piece::before {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 80px;
+    box-shadow: 10px -10px 15px -5px var(--shadow);
+}
+.piece::after {
+    position: absolute;
+    content: '';
+    top: -30px;
+    left: 10px;
+    width: 135px;
+    height: 80px;
+    box-shadow: -5px 25px 15px -20px var(--shadow);
+    transform: rotate(45deg);
+}
+.solidPiece {
+    position: absolute;
+    left: 10px;
+    width: 0px;
+    height: 0px;
+    border-right: 70px solid var(--solid);
+    border-bottom: 70px solid transparent;
+
+}
+
+
+    /* cat */
+    /* head */
+.cat :nth-child(1) {
+    top: 120px;
+    left: 320px;
+    transform: rotate(250deg) scale(.4);
+}
+.cat :nth-child(2) {
+    top: 135px;
+    left: 315px;
+    transform: rotate(50deg) scale(.4);
+}
+.cat :nth-child(3) {
+    top: 160px;
+    left: 330px;
+    transform: rotate(45deg) scale(.3);
+}
+.cat :nth-child(4) {
+    top: 160px;
+    left: 315px;
+    transform: rotate(90deg) scale(.3);
+}
+.cat :nth-child(5) {
+    top: 150px;
+    left: 290px;
+    transform: rotate(70deg) scale(.5);
+}
+.cat :nth-child(6) {
+    top: 130px;
+    left: 280px;
+    transform: rotate(-20deg) scale(.4);
+}
+.cat :nth-child(7) {
+    top: 150px;
+    left: 260px;
+    transform: rotate(30deg) scale(.65);
+}
+
+    /* body */
+.cat :nth-child(8) {
+    top: 140px;
+    left: 225px;
+    transform: rotate(10deg) scale(.55);
+}
+.cat :nth-child(9) {
+    top: 165px;
+    left: 270px;
+    transform: rotate(210deg) scale(.55);
+}
+.cat :nth-child(10) {
+    top: 160px;
+    left: 200px;
+    transform: rotate(-30deg) scale(.80);
+}
+.cat :nth-child(11) {
+    top: 190px;
+    left: 200px;
+    transform: rotate(20deg) scale(.70);
+}
+.cat :nth-child(12) {
+    top: 115px;
+    left: 150px;
+    transform: rotate(145deg) scale(.70);
+}
+.cat :nth-child(13) {
+    top: 200px;
+    left: 160px;
+    transform: rotate(-30deg) scale(.90);
+}
+.cat :nth-child(14) {
+    top: 150px;
+    left: 80px;
+    transform: rotate(-15deg) scale(.85);
+}
+.cat :nth-child(15) {
+    top: 180px;
+    left: 60px;
+    transform: rotate(280deg) scale(.75);
+}
+.cat :nth-child(16) {
+    top: 200px;
+    left: 90px;
+    transform: rotate(-40deg) scale(.7);
+}
+.cat :nth-child(17) {
+    top: 210px;
+    left: 200px;
+    transform: rotate(170deg) scale(.45);
+}
+.cat :nth-child(18) {
+    top: 225px;
+    left: 150px;
+    transform: rotate(-20deg) scale(.55);
+}
+.cat :nth-child(19) {
+    top: 220px;
+    left: 140px;
+    transform: rotate(150deg) scale(.45);
+}
+
+    /* leg 1 */
+.cat :nth-child(20) {
+    top: 210px;
+    left: 250px;
+    transform: rotate(10deg) scale(.5);
+}
+.cat :nth-child(21) {
+    top: 215px;
+    left: 250px;
+    transform: rotate(180deg) scale(.5);
+}
+.cat :nth-child(22) {
+    top: 240px;
+    left: 270px;
+    transform: rotate(140deg) scale(.35);
+}
+.cat :nth-child(23) {
+    top: 225px;
+    left: 285px;
+    transform: rotate(190deg) scale(.30);
+}
+.cat :nth-child(24) {
+    top: 265px;
+    left: 295px;
+    transform: rotate(-40deg) scale(.4);
+}
+.cat :nth-child(25) {
+    top: 280px;
+    left: 310px;
+    transform: rotate(-10deg) scale(.35);
+}
+
+    /* leg 2 */
+.cat :nth-child(26) {
+    top: 230px;
+    left: 210px;
+    transform: rotate(120deg) scale(.35);
+}
+.cat :nth-child(27) {
+    top: 260px;
+    left: 190px;
+    transform: rotate(30deg) scale(.35);
+}
+.cat :nth-child(28) {
+    top: 290px;
+    left: 210px;
+    transform: rotate(-35deg) scale(.30);
+}
+
+    /* leg 3 */
+.cat :nth-child(29) {
+    top: 220px;
+    left: 65px;
+    transform: rotate(290deg) scale(.55);
+}
+.cat :nth-child(30) {
+    top: 210px;
+    left: 20px;
+    transform: rotate(80deg) scale(.4);
+}
+.cat :nth-child(31) {
+    top: 230px;
+    left: 25px;
+    transform: rotate(130deg) scale(.35);
+}
+.cat :nth-child(32) {
+    top: 245px;
+    left: 15px;
+    transform: rotate(200deg) scale(.30);
+}
+.cat :nth-child(33) {
+    top: 270px;
+    left: -5px;
+    transform: rotate(20deg) scale(.30);
+}
+.cat :nth-child(34) {
+    top: 280px;
+    left: 0px;
+    transform: rotate(190deg) scale(.35);
+}
+
+    /* leg 4 */
+.cat :nth-child(35) {
+    top: 240px;
+    left: 90px;
+    transform: rotate(-20deg) scale(.55);
+}
+.cat :nth-child(36) {
+    top: 255px;
+    left: 70px;
+    transform: rotate(-80deg) scale(.45);
+}
+.cat :nth-child(37) {
+    top: 260px;
+    left: 70px;
+    transform: rotate(90deg) scale(.35);
+}
+.cat :nth-child(38) {
+    top: 285px;
+    left: 90px;
+    transform: rotate(160deg) scale(.30);
+}
+
+    /* tail */
+.cat :nth-child(39) {
+    top: 95px;
+    left: 55px;
+    transform: rotate(170deg) scale(.45);
+}
+.cat :nth-child(40) {
+    top: 90px;
+    left: 45px;
+    transform: rotate(0deg) scale(.45);
+}
+.cat :nth-child(41) {
+    top: 40px;
+    left: 45px;
+    transform: rotate(180deg) scale(.40);
+}
+.cat :nth-child(42) {
+    top: 30px;
+    left: 35px;
+    transform: rotate(0deg) scale(.35);
+}
+.cat :nth-child(43) {
+    top: 0px;
+    left: 45px;
+    transform: rotate(200deg) scale(.35);
+}
+.cat :nth-child(44) {
+    top: -10px;
+    left: 40px;
+    transform: rotate(30deg) scale(.4);
+}
+
+    /* animations */
+    /* click me */
+.box:hover::before {
+    color: rgb(116, 26, 11);
+    font-weight: 900;
+}
+.box:active::before {
+    transform: translateY(-20px);
+
+}
