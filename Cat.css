@@ -1,5 +1,5 @@
 :root {
-    --shadow : rgba(255, 255, 255, 0.473);
+    --shadow : rgba(255, 255, 255, 0.80);
     --solid : rgb(46, 113, 150);
 }
 * {
@@ -7,19 +7,9 @@
     backface-visibility: hidden;
 }
 body {
-    background-color: rgb(37, 38, 43);
-    /* this background pattern "Starry night" courtesy of projects.verou.me/css3patterns/ */
-    background-color:black;
-    background-image:
-    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    background-color: rgb(0, 0, 0);
     color: white;
 }
-
 header {
     margin-top: 40px;
     text-align: center;
@@ -45,8 +35,18 @@ header {
     height: 60%;
     border-left: 45px solid transparent;
     border-right: 45px solid transparent;
-    border-bottom: 45px solid white;
-    box-shadow: 0px -10px 20px 0px rgb(181, 189, 191);
+    border-bottom: 45px solid rgb(54, 9, 9);
+    box-shadow: 0px -10px 40px 0px rgb(255, 255, 255);
+    /* this background pattern "Starry night" courtesy of projects.verou.me/css3patterns/ */
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+     
 }
 .box {
     position: absolute;
@@ -55,7 +55,6 @@ header {
     width: 80px;
     height: 80px;
     background-color: rgba(255, 255, 255, 0.466);
-    
 }
 .box::before {
     position: absolute;
@@ -72,7 +71,6 @@ header {
     position: absolute;
     top: 280px;
     left: 180px;
-    transform: scale(1);
 }
 
     /* cat pieces */
@@ -101,11 +99,8 @@ header {
 .solidPiece {
     position: absolute;
     left: 10px;
-    width: 0px;
-    height: 0px;
     border-right: 70px solid var(--solid);
     border-bottom: 70px solid transparent;
-
 }
 
 
@@ -208,94 +203,94 @@ header {
     left: 140px;
     transform: rotate(150deg) scale(.45);
 }
+.cat :nth-child(20) {
+    top: 240px;
+    left: 90px;
+    transform: rotate(-20deg) scale(.55);
+}
 
     /* leg 1 */
-.cat :nth-child(20) {
+.cat :nth-child(21) {
     top: 210px;
     left: 250px;
     transform: rotate(10deg) scale(.5);
 }
-.cat :nth-child(21) {
+.cat :nth-child(22) {
     top: 215px;
     left: 250px;
     transform: rotate(180deg) scale(.5);
 }
-.cat :nth-child(22) {
+.cat :nth-child(23) {
     top: 240px;
     left: 270px;
     transform: rotate(140deg) scale(.35);
 }
-.cat :nth-child(23) {
+.cat :nth-child(24) {
     top: 225px;
     left: 285px;
     transform: rotate(190deg) scale(.30);
 }
-.cat :nth-child(24) {
+.cat :nth-child(25) {
     top: 265px;
     left: 295px;
     transform: rotate(-40deg) scale(.4);
 }
-.cat :nth-child(25) {
+.cat :nth-child(26) {
     top: 280px;
     left: 310px;
     transform: rotate(-10deg) scale(.35);
 }
 
     /* leg 2 */
-.cat :nth-child(26) {
+.cat :nth-child(27) {
     top: 230px;
     left: 210px;
     transform: rotate(120deg) scale(.35);
 }
-.cat :nth-child(27) {
+.cat :nth-child(28) {
     top: 260px;
     left: 190px;
     transform: rotate(30deg) scale(.35);
 }
-.cat :nth-child(28) {
+.cat :nth-child(29) {
     top: 290px;
     left: 210px;
     transform: rotate(-35deg) scale(.30);
 }
 
     /* leg 3 */
-.cat :nth-child(29) {
+.cat :nth-child(30) {
     top: 220px;
     left: 65px;
     transform: rotate(290deg) scale(.55);
 }
-.cat :nth-child(30) {
+.cat :nth-child(31) {
     top: 210px;
     left: 20px;
     transform: rotate(80deg) scale(.4);
 }
-.cat :nth-child(31) {
+.cat :nth-child(32) {
     top: 230px;
     left: 25px;
     transform: rotate(130deg) scale(.35);
 }
-.cat :nth-child(32) {
+.cat :nth-child(33) {
     top: 245px;
     left: 15px;
     transform: rotate(200deg) scale(.30);
 }
-.cat :nth-child(33) {
+.cat :nth-child(34) {
     top: 270px;
     left: -5px;
     transform: rotate(20deg) scale(.30);
 }
-.cat :nth-child(34) {
+.cat :nth-child(35) {
     top: 280px;
     left: 0px;
     transform: rotate(190deg) scale(.35);
 }
 
-    /* leg 4 */
-.cat :nth-child(35) {
-    top: 240px;
-    left: 90px;
-    transform: rotate(-20deg) scale(.55);
-}
+    /* leg 4 piece */
 .cat :nth-child(36) {
     top: 255px;
     left: 70px;
@@ -319,7 +314,7 @@ header {
     transform: rotate(170deg) scale(.45);
 }
 .cat :nth-child(40) {
-    top: 90px;
+    top: 80px;
     left: 45px;
     transform: rotate(0deg) scale(.45);
 }
@@ -353,4 +348,185 @@ header {
 .box:active::before {
     transform: translateY(-20px);
 
+}
+.piece:hover {
+    box-shadow: 0px 0px 10px 0px rgba(64, 224, 208, 0);
+}
+
+    /* cat */
+
+    /* leg 1 animation */
+.cat :nth-child(21):active {
+    transform: rotate(10deg) scale(.5);
+    animation: leg1c21 3s linear infinite;
+}
+@keyframes leg1c21 {
+    100% {
+        transform: rotate(40deg) translateX(-5px) rotate(10deg) scale(.5);
+    }
+}
+.cat :nth-child(22):active {
+    transform: rotate(180deg) scale(.5);
+    animation: leg1c22 3s linear infinite;
+}
+@keyframes leg1c22 {
+    100% {
+        transform: translateX(-5px) rotate(30deg) rotate(180deg) scale(.5);
+    }
+}
+.cat :nth-child(23):active {
+    transform: rotate(140deg) scale(.35);
+    animation: leg1c23 3s linear infinite;
+}
+@keyframes leg1c23 {
+    100% {
+        transform: translateX(-15px) rotate(20deg) rotate(140deg) scale(.35);
+    }
+}
+.cat :nth-child(24):active {
+    transform: rotate(190deg) scale(.30);
+    animation: leg1c24 3s linear infinite;
+}
+@keyframes leg1c24 {
+    100% {
+        transform: translateX(-15px) rotate(30deg) rotate(190deg) scale(.30);
+    }
+}
+.cat :nth-child(25):active { 
+    transform: rotate(-40deg) scale(.4);
+    animation: leg1c25 2s linear infinite;
+}
+@keyframes leg1c25 {
+    100% {
+        transform: translateY(10px) translateX(-20px) rotate(30deg) rotate(-40deg) scale(.4);
+    }
+}
+.cat :nth-child(26):active {
+    transform: ;
+    animation: leg1c26 2s linear infinite;
+}
+@keyframes leg1c26 {
+    20% { 
+        transform: translateX(-15px) translateY(5px) rotate(-10deg) scale(.35);
+    }
+    40% {
+        transform: translateY(10px) rotate(-30deg) rotate(-10deg) scale(.35);
+    }
+    100% {
+        transform: translateY(15px) translateX(-20px) rotate(-20deg)  rotate(-10deg) scale(.35);
+    }
+}
+
+    /* leg 2 animation */
+.cat :nth-child(27):active {
+    transform: rotate(120deg) scale(.35);
+    animation: leg2c27 2.5s linear infinite;
+}
+@keyframes leg2c27 {
+    100% {
+        transform: translateX(-10px) rotate(20deg) rotate(120deg) scale(.35);
+    }
+}
+.cat :nth-child(28):active {
+    transform: rotate(30deg) scale(.35);
+    animation: leg2c28 2s linear infinite;
+}
+@keyframes leg2c28 {
+    100% { 
+        transform: translateX(-10px) rotate(20deg) rotate(30deg) scale(.35);
+    }
+}
+.cat :nth-child(29):active {
+    transform: rotate(-35deg) scale(.30);
+    animation: leg2c29 2s linear infinite;
+}
+@keyframes leg2c29 {
+    100% {
+        transform: translateX(-15px) rotate(-10deg) rotate(-35deg) scale(.30);
+    }
+}
+
+    /* leg 3 animation */
+.cat :nth-child(30):active {
+    transform: rotate(290deg) scale(.55);
+    animation: leg3c30 3s linear infinite;
+}
+@keyframes leg3c30 {
+    100% {
+        transform:  translateX(10px) rotate(-30deg) rotate(290deg) scale(.55);
+    }
+}
+.cat :nth-child(31):active {
+    transform: rotate(80deg) scale(.4);
+    animation: leg3c31 3s linear infinite;
+}
+@keyframes leg3c31 {
+    100% {
+        transform: translateY(10px) translateX(10px) rotate(-10deg) rotate(80deg) scale(.4);
+    }
+}
+.cat :nth-child(32):active {
+    transform: rotate(130deg) scale(.35);
+    animation: leg3c32 3s linear infinite;
+}
+@keyframes leg3c32 {
+    100% {
+        transform: translateX(15px) rotate(-20deg) rotate(130deg) scale(.35);
+    }
+}
+.cat :nth-child(33):active {
+    transform: rotate(200deg) scale(.30);
+    animation: leg3c33 3s linear infinite;
+}
+@keyframes leg3c33 {
+    100% {
+        transform: translateX(15px) translateY(10px) rotate(-20deg) rotate(200deg) scale(.30);
+    }
+}
+.cat :nth-child(34):active {
+    transform: rotate(20deg) scale(.30);
+    animation: leg3c34 3s linear infinite;
+}
+@keyframes leg3c34 {
+    100% {
+        transform: translateX(40px) translateY(10px) rotate(-20deg) rotate(20deg) scale(.30);
+    }
+}
+.cat :nth-child(35):active {
+    transform: rotate(190deg) scale(.35);
+    animation: leg3c35 2s linear infinite;
+}
+@keyframes leg3c35 {
+    100% { 
+        transform: translateX(30px) translateY(10px) rotate(-20deg) rotate(190deg) scale(.35);
+    }
+}
+
+    /* leg 4 animation */
+.cat :nth-child(36):active {
+    transform: rotate(-80deg) scale(.45);
+    animation: leg4c36 3s linear infinite;
+}
+@keyframes leg4c36 {
+    100% {
+        transform: translateX(-10px) rotate(20deg) rotate(-80deg) scale(.45);
+    }
+}
+.cat :nth-child(37):active {
+    transform: rotate(90deg) scale(.35);
+    animation: leg4c37 2s linear infinite;
+}
+@keyframes leg4c37 {
+    100% {
+        transform: translateX(-10px) rotate(20deg) rotate(90deg) scale(.35);
+    }
+}
+.cat :nth-child(38):active {
+    transform: rotate(160deg) scale(.30);
+    animation: leg4c38 2s linear infinite;
+}
+@keyframes leg4c38 {
+    100% {
+        transform: translateX(-20px) translateY(5px) rotate(20deg) rotate(160deg) scale(.30);;
+    }
 }

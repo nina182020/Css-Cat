@@ -1,6 +1,6 @@
-const cat = document.getElementById('cat');
-function createPiece() {
-    const piece = document.createElement('div');
-    piece.classList.add('piece');
-    cat.appendChild(piece);
+const piece = document.querySelector('.piece');
+function solidPiece() {
+    const solidPiece = document.createElement('div');
+    solidPiece.classList.add('solidPiece');
+    piece.appendChild(solidPiece);
 };
