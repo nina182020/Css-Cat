@@ -16,6 +16,9 @@ header {
     font-size: 34px;
     font-weight: bold;
 }
+span {
+    color: black;
+}
 .corner {
     position: absolute;
     top: 0px;
@@ -37,8 +40,6 @@ header {
     border-right: 45px solid transparent;
     border-bottom: 45px solid rgb(9, 16, 54);
     box-shadow: 0px -10px 40px 0px rgb(255, 255, 255);
-    /* this background pattern "Starry night" courtesy of projects.verou.me/css3patterns/ */
-    background-color:black;
     background-image:
     radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
     radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
@@ -48,7 +49,14 @@ header {
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
      
 }
+.grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(40, 10px);
+    grid-template-rows: repeat(40, 10px);
+}
 .box {
+    display: none;
     position: absolute;
     bottom: 40px;
     left: 40px;
@@ -69,8 +77,8 @@ header {
 }
 .cat {
     position: absolute;
-    top: 280px;
-    left: 180px;
+    top: 220px;
+    left: 150px;
 }
 
     /* cat pieces */
@@ -179,9 +187,9 @@ header {
     transform: rotate(-15deg) scale(.85);
 }
 .cat :nth-child(15) {
-    top: 180px;
+    top: 175px;
     left: 60px;
-    transform: rotate(280deg) scale(.75);
+    transform: rotate(280deg) scale(.7);
 }
 .cat :nth-child(16) {
     top: 200px;
@@ -206,7 +214,7 @@ header {
 .cat :nth-child(20) {
     top: 240px;
     left: 90px;
-    transform: rotate(-20deg) scale(.55);
+    transform: rotate(-30deg) scale(.55);
 }
 
     /* leg 1 */
@@ -314,24 +322,24 @@ header {
     transform: rotate(170deg) scale(.45);
 }
 .cat :nth-child(40) {
-    top: 80px;
-    left: 45px;
-    transform: rotate(0deg) scale(.45);
+    top: 85px;
+    left: 40px;
+    transform: rotate(0deg) scale(.40);
 }
 .cat :nth-child(41) {
-    top: 40px;
+    top: 45px;
     left: 45px;
     transform: rotate(180deg) scale(.40);
 }
 .cat :nth-child(42) {
-    top: 30px;
+    top: 35px;
     left: 35px;
-    transform: rotate(0deg) scale(.35);
+    transform: rotate(0deg) scale(.4);
 }
 .cat :nth-child(43) {
     top: 0px;
     left: 45px;
-    transform: rotate(200deg) scale(.35);
+    transform: rotate(200deg) scale(.4);
 }
 .cat :nth-child(44) {
     top: -10px;
@@ -354,11 +362,18 @@ header {
 }
 
     /* cat */
-
+.cat:active {
+    animation: cat 4s linear infinite;
+}
+@keyframes cat {
+    100% {
+        transform: translateX(200px);
+    }
+}
     /* leg 1 animation */
 .cat :nth-child(21) {
     transform: rotate(10deg) scale(.5);
-    animation: leg1c21 2s linear infinite alternate;
+    animation: leg1c21 1.5s linear infinite;
 }
 @keyframes leg1c21 {
     100% {
@@ -367,7 +382,7 @@ header {
 }
 .cat :nth-child(22) {
     transform: rotate(180deg) scale(.5);
-    animation: leg1c22 2s linear infinite alternate;
+    animation: leg1c22 1.5s linear infinite;
 }
 @keyframes leg1c22 {
     100% {
@@ -376,7 +391,7 @@ header {
 }
 .cat :nth-child(23) {
     transform: rotate(140deg) scale(.35);
-    animation: leg1c23 2s linear infinite alternate;
+    animation: leg1c23 1.5s linear infinite;
 }
 @keyframes leg1c23 {
     100% {
@@ -385,7 +400,7 @@ header {
 }
 .cat :nth-child(24) {
     transform: rotate(190deg) scale(.30);
-    animation: leg1c24 2s linear infinite alternate;
+    animation: leg1c24 1.5s linear infinite;
 }
 @keyframes leg1c24 {
     100% {
@@ -394,7 +409,7 @@ header {
 }
 .cat :nth-child(25) { 
     transform: rotate(-40deg) scale(.4);
-    animation: leg1c25 2s linear infinite alternate;
+    animation: leg1c25 1.5s linear infinite;
 }
 @keyframes leg1c25 {
     100% {
@@ -403,7 +418,7 @@ header {
 }
 .cat :nth-child(26) {
     transform: rotate(-10deg) scale(.35);
-    animation: leg1c26 2s linear infinite alternate;
+    animation: leg1c26 1.5s linear infinite;
 }
 @keyframes leg1c26 {
     100% {
@@ -414,7 +429,7 @@ header {
     /* leg 2 animation */
 .cat :nth-child(27) {
     transform: rotate(120deg) scale(.35);
-    animation: leg2c27 2s linear infinite alternate 2s;
+    animation: leg2c27 1.5s linear infinite;
 }
 @keyframes leg2c27 {
     100% {
@@ -423,27 +438,27 @@ header {
 }
 .cat :nth-child(28) {
     transform: rotate(30deg) scale(.35);
-    animation: leg2c28 2s linear infinite alternate 2s;
+    animation: leg2c28 1.5s linear infinite;
 }
 @keyframes leg2c28 {
     100% { 
-        transform: translateX(-30px) rotate(20deg) rotate(30deg) scale(.35);
+        transform: translateX(-30px) translateY(10px) rotate(20deg) rotate(30deg) scale(.35);
     }
 }
 .cat :nth-child(29) {
     transform: rotate(-35deg) scale(.30);
-    animation: leg2c29 2s linear infinite alternate 2s;
+    animation: leg2c29 1.5s linear infinite;
 }
 @keyframes leg2c29 {
     100% {
-        transform: translateX(-30px) translateY(5px) rotate(-10deg) rotate(-35deg) scale(.30);
+        transform: translateX(-30px) translateY(10px) rotate(-20deg) rotate(-35deg) scale(.30);
     }
 }
 
     /* leg 3 animation */
 .cat :nth-child(30) {
     transform: rotate(290deg) scale(.55);
-    animation: leg3c30 2s linear infinite alternate;
+    animation: leg3c30 1.5s linear infinite;
 }
 @keyframes leg3c30 {
     100% {
@@ -452,7 +467,7 @@ header {
 }
 .cat :nth-child(31) {
     transform: rotate(80deg) scale(.4);
-    animation: leg3c31 2s linear infinite alternate;
+    animation: leg3c31 1.5s linear infinite;
 }
 @keyframes leg3c31 {
     100% {
@@ -461,7 +476,7 @@ header {
 }
 .cat :nth-child(32) {
     transform: rotate(130deg) scale(.35);
-    animation: leg3c32 2s linear infinite alternate;
+    animation: leg3c32 1.5s linear infinite;
 }
 @keyframes leg3c32 {
     100% {
@@ -470,7 +485,7 @@ header {
 }
 .cat :nth-child(33) {
     transform: rotate(200deg) scale(.30);
-    animation: leg3c33 2s linear infinite alternate;
+    animation: leg3c33 1.5s linear infinite;
 }
 @keyframes leg3c33 {
     100% {
@@ -479,7 +494,7 @@ header {
 }
 .cat :nth-child(34) {
     transform: rotate(20deg) scale(.30);
-    animation: leg3c34 2s linear infinite alternate;
+    animation: leg3c34 1.5s linear infinite;
 }
 @keyframes leg3c34 {
     100% {
@@ -488,7 +503,7 @@ header {
 }
 .cat :nth-child(35) {
     transform: rotate(190deg) scale(.35);
-    animation: leg3c35 2s linear infinite alternate;
+    animation: leg3c35 1.5s linear infinite;
 }
 @keyframes leg3c35 {
     100% { 
@@ -499,7 +514,7 @@ header {
     /* leg 4 animation */
 .cat :nth-child(36) {
     transform: rotate(-80deg) scale(.45);
-    animation: leg4c36 2s linear infinite alternate;
+    animation: leg4c36 1.5s linear infinite;
 }
 @keyframes leg4c36 {
     100% {   
@@ -508,7 +523,7 @@ header {
 }
 .cat :nth-child(37) {
     transform: rotate(90deg) scale(.35);
-    animation: leg4c37 2s linear infinite alternate;
+    animation: leg4c37 1.5s linear infinite;
 }
 @keyframes leg4c37 {
     100% {
@@ -517,10 +532,366 @@ header {
 }
 .cat :nth-child(38) {
     transform: rotate(160deg) scale(.30);
-    animation: leg4c38 2s linear infinite alternate;
+    animation: leg4c38 1.5s linear infinite;
 }
 @keyframes leg4c38 {
     100% {
-        transform: translateX(-50px) translateY(5px) rotate(50deg) rotate(160deg) scale(.30);;
+        transform: translateX(-50px) translateY(5px) rotate(50deg) rotate(160deg) scale(.30);
+    }
+}
+
+    /* tail animation */
+.cat :nth-child(39) {
+    animation: tailc39 1.5s linear  infinite;
+}
+@keyframes tailc39 {
+    0% {
+        top: 120px;
+        left: 20px;
+        transform: rotate(-45deg) 
+        rotate(170deg) scale(.45);   
+    }
+    12.5% {
+        top: 120px;
+        left: 20px;
+        transform: rotate(-55deg) 
+        rotate(170deg) scale(.45);
+    }
+    25% {
+        top: 120px;
+        left: 20px;
+        transform: rotate(-55deg) 
+        rotate(170deg) scale(.45);
+    }
+    37.5% {
+        top: 120px;
+        left: 20px;
+        transform: rotate(-55deg) 
+        rotate(170deg) scale(.45);
+    }
+    50% {
+        top: 115px;
+        left: 20px;
+        transform: rotate(-40deg) 
+        rotate(170deg) scale(.45);
+    }
+    62.5% {
+        top: 115px;
+        left: 20px;
+        transform: rotate(-35deg) 
+        rotate(170deg) scale(.45);
+    }
+    75% {
+        top: 115px;
+        left: 20px;
+        transform: rotate(-35deg) 
+        rotate(170deg) scale(.45);
+    }
+    87.5% {
+        top: 115px;
+        left: 20px;
+        transform: rotate(-40deg) 
+        rotate(170deg) scale(.45);
+    }
+    100% {
+        top: 120px;
+        left: 20px;
+        transform: rotate(-45deg) 
+        rotate(170deg) scale(.45);
+    }
+}
+.cat :nth-child(40) {
+    animation: tailc40 1.5s linear  infinite;
+}
+@keyframes tailc40 {
+    0% {
+        top: 120px;
+        left: 0px;
+        transform: rotate(-60deg) 
+        rotate(0deg) scale(.40);
+    }
+    12.5% {
+        top: 125px;
+        left: -5px;
+        transform: rotate(-70deg) 
+        rotate(0deg) scale(.40);
+    }
+    25% {
+        top: 125px;
+        left: 0px;
+        transform: rotate(-60deg) 
+        rotate(0deg) scale(.40);
+    }
+    37.5% {
+        top: 125px;
+        left: 0px;
+        transform: rotate(-60deg) 
+        rotate(0deg) scale(.40);
+    }
+    50% {
+        top: 110px;
+        left: 5px;
+        transform: rotate(-40deg) 
+        rotate(0deg) scale(.40);
+    }
+    62.5% {
+        top: 110px;
+        left: 5px;
+        transform: rotate(-40deg) 
+        rotate(0deg) scale(.40);
+    }
+    75% {
+        top: 110px;
+        left: 5px;
+        transform: rotate(-40deg) 
+        rotate(0deg) scale(.40);
+    }
+    87.5% {
+        top: 115px;
+        left: 0px;
+        transform: rotate(-40deg) 
+        rotate(0deg) scale(.40);
+    }
+    100% {
+        top: 120px;
+        left: 0px;
+        transform: rotate(-60deg) 
+        rotate(0deg) scale(.40);
+    }
+}
+.cat :nth-child(41) {
+    animation: tailc41 1.5s linear  infinite;
+}
+@keyframes tailc41 {
+    0% {
+        top: 90px;
+        left: -30px;
+        transform: rotate(-40deg) 
+        rotate(180deg) scale(.40);
+    }
+    12.5% {
+        top: 95px;
+        left: -40px;
+        transform: rotate(-50deg) 
+        rotate(180deg) scale(.40);
+    }
+    25% {
+        top: 95px;
+        left: -35px;
+        transform: rotate(-50deg) 
+        rotate(180deg) scale(.40);
+    }
+    37.5% {
+        top: 95px;
+        left: -35px;
+        transform: rotate(-50deg) 
+        rotate(180deg) scale(.40);
+    }
+    50% {
+        top: 75px;
+        left: -15px;
+        transform: rotate(-25deg) 
+        rotate(180deg) scale(.40);
+    }
+    62.5% {
+        top: 70px;
+        left: -5px;
+        transform: rotate(-15deg) 
+        rotate(180deg) scale(.40);
+    }
+    75% {
+        top: 70px;
+        left: -10px;
+        transform: rotate(-15deg) 
+        rotate(180deg) scale(.40);
+    }
+    87.5% {
+        top: 75px;
+        left: -15px;
+        transform: rotate(-20deg) 
+        rotate(180deg) scale(.40);
+    }
+    100% {
+        top: 90px;
+        left: -30px;
+        transform: rotate(-40deg) 
+        rotate(180deg) scale(.40);
+    }
+}
+.cat :nth-child(42) {
+    animation: tailc42 1.5s linear  infinite;
+}
+@keyframes tailc42 {
+    0% {
+        top: 80px;
+        left: -45px;
+        transform: rotate(-40deg) 
+        rotate(0deg) scale(.4);
+    }
+    12.5% {
+        top: 90px;
+        left: -65px;
+        transform: rotate(-40deg) 
+        rotate(0deg) scale(.4);
+    }
+    25% {
+        top: 90px;
+        left: -45px;
+        transform: rotate(-60deg) 
+        rotate(0deg) scale(.4);
+    }
+    37.5% {
+        top: 90px;
+        left: -45px;
+        transform: rotate(-60deg) 
+        rotate(0deg) scale(.4);
+    }
+    50% {
+        top: 70px;
+        left: -20px;
+        transform: rotate(-30deg) 
+        rotate(0deg) scale(.4);
+    }
+    62.5% {
+        top: 65px;
+        left: -10px;
+        transform: rotate(-20deg) 
+        rotate(0deg) scale(.4);
+    }
+    75% {
+        top: 65px;
+        left: -20px;
+        transform: rotate(-20deg) 
+        rotate(0deg) scale(.4);
+    }
+    87.5% {
+        top: 70px;
+        left: -25px;
+        transform: rotate(-20deg) 
+        rotate(0deg) scale(.4);
+    }
+    100% {
+        top: 80px;
+        left: -45px;
+        transform: rotate(-40deg) 
+        rotate(0deg) scale(.4);
+    }
+}
+.cat :nth-child(43) {
+    animation: tailc43 1.5s linear  infinite;
+}
+@keyframes tailc43 {
+    0% {
+        top: 40px;
+        left: -60px;
+        transform: rotate(-40deg)
+        rotate(200deg) scale(.4);
+    }
+    12.5% {
+        top: 50px;
+        left: -80px;
+        transform: rotate(-40deg)
+        rotate(200deg) scale(.4);
+    }
+    25% {
+        top: 65px;
+        left: -80px;
+        transform: rotate(-90deg)
+        rotate(200deg) scale(.4);
+    }
+    37.5% {
+        top: 65px;
+        left: -80px;
+        transform: rotate(-90deg)
+        rotate(200deg) scale(.4);
+    }
+    50% {
+        top: 35px;
+        left: -45px;
+        transform: rotate(-70deg)
+        rotate(200deg) scale(.4);
+    }
+    62.5% {
+        top: 25px;
+        left: -30px;
+        transform: rotate(-80deg)
+        rotate(200deg) scale(.4);
+    }
+    75% {
+        top: 25px;
+        left: -30px;
+        transform: rotate(-50deg)
+        rotate(200deg) scale(.4);
+    }
+    87.5% {
+        top: 30px;
+        left: -35px;
+        transform: rotate(-45deg)
+        rotate(200deg) scale(.4);
+    }
+    100% {
+        top: 40px;
+        left: -60px;
+        transform: rotate(-40deg)
+        rotate(200deg) scale(.4);
+    }
+}
+.cat :nth-child(44) {
+    animation: tailc44 1.5s linear  infinite;
+}
+@keyframes tailc44 {
+    0% {
+        top: 30px;
+        left: -60px;
+        transform: rotate(-30deg) 
+        rotate(30deg) scale(.4);
+    }
+    12.5% {
+        top: 40px;
+        left: -80px;
+        transform: rotate(-30deg) 
+        rotate(30deg) scale(.4);
+    }
+    25% {
+        top: 65px;
+        left: -95px;
+        transform: rotate(-100deg) 
+        rotate(30deg) scale(.4);
+    }
+    37.5% {
+        top: 65px;
+        left: -95px;
+        transform: rotate(-100deg) 
+        rotate(30deg) scale(.4);
+    }
+    50% {
+        top: 30px;
+        left: -55px;
+        transform: rotate(-90deg) 
+        rotate(30deg) scale(.4);
+    }
+    62.5% {
+        top: 25px;
+        left: -40px;
+        transform: rotate(-105deg) 
+        rotate(30deg) scale(.4);
+    }
+    75% {
+        top: 20px;
+        left: -40px;
+        transform: rotate(-65deg) 
+        rotate(30deg) scale(.4);
+    }
+    87.5% {
+        top: 20px;
+        left: -45px;
+        transform: rotate(-50deg) 
+        rotate(30deg) scale(.4);
+    }
+    100% {
+        top: 30px;
+        left: -60px;
+        transform: rotate(-30deg) 
+        rotate(30deg) scale(.4);
     }
 }
