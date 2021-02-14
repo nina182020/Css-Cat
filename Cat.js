@@ -61,7 +61,7 @@ function animateCat(startPiece, endPiece) {
     pawsCat();
     startPiece -= 1;
     endPiece -=1;
-    for (i = startPiece; i <= endPiece; i++) {
+    for (let i = startPiece; i <= endPiece; i++) {
         piece[i].style.animation = '';
     };
 };
@@ -69,7 +69,7 @@ function moveCat() {
     cat.style.animation = '';
 };
 function pawsCat() {
-    for (i = 20; i < 44; i++) {
+    for (let i = 20; i < 44; i++) {
         piece[i].style.animation = 'paused';
         cat.style.animation = 'paused';
     };
@@ -77,14 +77,21 @@ function pawsCat() {
 
 pawsCat();
 
-
-
-for (i = 0; i < 44; i++) {
-    piece[i].style.opacity = '1';
+function addSolidPiece() {
+    for (let i = 0; i < 44; i++) {
+        setTimeout(() => {
+            piece[i].classList.add('solidPiece');
+        },500 + (500 * i));
+    };
 };
 
+
+
+for (let i = 0; i < 44; i++) {
+    piece[i].style.opacity = '1';
+};
 function resetPosition() {
-    for (i = 20; i < 44; i++) {
+    for (let i = 20; i < 44; i++) {
         piece[i].style.left = '0px';
         piece[i].style.top = '0px';
     };

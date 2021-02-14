@@ -1,6 +1,6 @@
 :root {
     --shadow : rgb(255, 255, 255);
-    --solid : rgb(46, 113, 150);
+    --solid : rgb(17, 63, 87);
     --catScaleAnimation : 1;
 }
 * {
@@ -8,6 +8,7 @@
     backface-visibility: hidden;
 }
 body {
+    overflow: hidden;
     background-color: rgb(0, 0, 0);
     color: white;
 }
@@ -28,7 +29,7 @@ hr {
     height: 60%;
     border-left: 45px solid transparent;
     border-right: 45px solid transparent;
-    border-bottom: 45px solid rgb(9, 16, 54);
+    border-bottom: 45px solid rgb(10, 22, 41);
     box-shadow: 0px -10px 40px 0px rgb(255, 255, 255);
     background-image:
     radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
@@ -61,7 +62,7 @@ hr {
     position: absolute;
     bottom: 10px;
     right: 90px;
-    background-color: rgb(41, 60, 65);
+    background-color: rgb(15, 63, 75);
     padding: 5px 10px;
 }
 label {
@@ -71,6 +72,9 @@ label {
     position: absolute;
     bottom: 440px;
     left: 150px;
+}
+.cat > .piece {
+    z-index: 10;
 }
 
     /* box click me */
@@ -109,10 +113,10 @@ label {
     transform: rotate(45deg);
 }
 .solidPiece {
-    position: absolute;
-    left: 10px;
-    border-right: 70px solid var(--solid);
-    border-bottom: 70px solid transparent;
+    width: 81px;
+    height: 70px;
+    border-right: 71px solid var(--solid);
+    border-bottom: 71px solid transparent;
 }
 
     /* cat */
@@ -190,7 +194,7 @@ label {
     transform: rotate(-15deg) scale(.85);
 }
 .cat :nth-child(15) {
-    top: 175px;
+    top: 180px;
     left: 60px;
     transform: rotate(280deg) scale(.7);
 }
@@ -253,16 +257,19 @@ label {
 }
     /* leg 2 */
 .cat :nth-child(27) {
+    z-index: 8;
     top: 230px;
     left: 210px;
     transform: rotate(120deg) scale(.35);
 }
 .cat :nth-child(28) {
+    z-index: 8;
     top: 260px;
     left: 190px;
     transform: rotate(30deg) scale(.35);
 }
 .cat :nth-child(29) {
+    z-index: 8;
     top: 290px;
     left: 210px;
     transform: rotate(-35deg) scale(.30);
@@ -302,16 +309,19 @@ label {
 
     /* leg 4 piece */
 .cat :nth-child(36) {
+    z-index: 8;
     top: 250px;
     left: 70px;
     transform: rotate(-75deg) scale(.45);
 }
 .cat :nth-child(37) {
+    z-index: 8;
     top: 255px;
     left: 60px;
     transform: rotate(90deg) scale(.35);
 }
 .cat :nth-child(38) {
+    z-index: 8;
     top: 285px;
     left: 65px;
     transform: rotate(180deg) scale(.30);
@@ -351,11 +361,11 @@ label {
 
     /* cat animation*/
 .cat {
-    animation: cat 4s linear infinite;
+    animation: cat 8s linear infinite;
 }
 @keyframes cat {
     100% {
-        transform: translateX(200px) scale(var(--catScaleAnimation));
+        transform: translateX(600px) scale(var(--catScaleAnimation));
     }
 }
 
@@ -819,34 +829,34 @@ label {
 }
 @keyframes leg3c30 {
     0% {
-        top: 200px;
+        top: 205px;
         left: 90px;
         transform: rotate(-40deg) rotate(290deg) scale(.55);
     }
     12.5% {
-        top: 200px;
+        top: 205px;
         left: 100px;
-        transform: rotate(-50deg) rotate(290deg) scale(.55);
+        transform: rotate(-55deg) rotate(290deg) scale(.55);
     }
     25% {
         top: 195px;
-        left: 115px;
-        transform: rotate(-90deg) rotate(290deg) scale(.55);
+        left: 105px;
+        transform: rotate(-105deg) rotate(290deg) scale(.55);
     }
     37.5% {
         top: 220px;
-        left: 110px;
-        transform: rotate(-50deg) rotate(290deg) scale(.55);
+        left: 100px;
+        transform: rotate(-65deg) rotate(290deg) scale(.55);
     }
     50% {
-        top: 210px;
-        left: 100px;
+        top: 215px;
+        left: 95px;
         transform: rotate(-50deg) rotate(290deg) scale(.55);
     }
     62.5% {
         top: 215px;
-        left: 95px;
-        transform: rotate(-40deg) rotate(290deg) scale(.55);
+        left: 90px;
+        transform: rotate(-50deg) rotate(290deg) scale(.55);
     }
     75% {
         top: 220px;
@@ -855,11 +865,11 @@ label {
     }
     87.5% {
         top: 220px;
-        left: 75px;
+        left: 80px;
         transform: rotate(-15deg) rotate(290deg) scale(.55);
     }
     100% {    
-        top: 200px;
+        top: 205px;
         left: 90px;
         transform: rotate(-40deg) rotate(290deg) scale(.55);
     }
@@ -869,24 +879,24 @@ label {
 }
 @keyframes leg3c31 {
     0% {
-        top: 195px;
+        top: 200px;
         left: 30px;
         transform: rotate(-30deg) rotate(80deg) scale(.4);
     }
     12.5% {
-        top: 195px;
+        top: 200px;
         left: 40px;
-        transform: rotate(-50deg) rotate(80deg) scale(.4);
+        transform: rotate(-60deg) rotate(80deg) scale(.4);
     }
     25% {
-        top: 215px;
-        left: 55px;
-        transform: rotate(-80deg) rotate(80deg) scale(.4);
+        top: 225px;
+        left: 50px;
+        transform: rotate(-85deg) rotate(80deg) scale(.4);
     }
     37.5% {
         top: 220px;
-        left: 50px;
-        transform: rotate(-55deg) rotate(80deg) scale(.4);
+        left: 45px;
+        transform: rotate(-65deg) rotate(80deg) scale(.4);
     }
     50% {
         top: 215px;
@@ -894,9 +904,9 @@ label {
         transform: rotate(-45deg) rotate(80deg) scale(.4);
     }
     62.5% {
-        top: 210px;
-        left: 40px;
-        transform: rotate(-30deg) rotate(80deg) scale(.4);
+        top: 215px;
+        left: 35px;
+        transform: rotate(-50deg) rotate(80deg) scale(.4);
     }
     75% {
         top: 210px;
@@ -909,7 +919,7 @@ label {
         transform: rotate(0deg) rotate(80deg) scale(.4);
     }
     100% {
-        top: 195px;
+        top: 200px;
         left: 30px;
         transform: rotate(-30deg) rotate(80deg) scale(.4);
     }
@@ -924,7 +934,7 @@ label {
         transform: rotate(10deg) rotate(130deg) scale(.35);
     }
     12.5% {
-        top: 220px;
+        top: 225px;
         left: 75px;
         transform: rotate(30deg) rotate(130deg) scale(.35);
     }
@@ -941,7 +951,7 @@ label {
     50% {
         top: 235px;
         left: 70px;
-        transform: rotate(0deg) rotate(130deg) scale(.35);
+        transform: rotate(10deg) rotate(130deg) scale(.35);
     }
     62.5% {
         top: 235px;
@@ -956,7 +966,7 @@ label {
     87.5% {
         top: 235px;
         left: 30px;
-        transform: rotate(10deg) rotate(130deg) scale(.35);
+        transform: rotate(0deg) rotate(130deg) scale(.35);
     }
     100% {
         top: 220px;
@@ -970,37 +980,37 @@ label {
 @keyframes leg3c33 {
     0% {
         top: 230px;
-        left:30px;
+        left: 30px;
         transform: rotate(30deg) rotate(200deg) scale(.30);
     }
     12.5% {
-        top: 225px;
-        left:60px;
+        top: 230px;
+        left: 60px;
         transform: rotate(10deg) rotate(200deg) scale(.30);
     }
     25% {
         top: 240px;
-        left:90px;
+        left: 90px;
         transform: rotate(-40deg) rotate(200deg) scale(.30);
     }
     37.5% {
         top: 250px;
-        left:70px;
+        left: 70px;
         transform: rotate(-10deg) rotate(200deg) scale(.30);
     }
     50% {
         top: 245px;
-        left:55px;
+        left: 55px;
         transform: rotate(-10deg) rotate(200deg) scale(.30);
     }
     62.5% {
         top: 245px;
-        left:50px;
+        left: 50px;
         transform: rotate(-5deg) rotate(200deg) scale(.30);
     }
     75% {
         top: 250px;
-        left:25px;
+        left: 25px;
         transform: rotate(15deg) rotate(200deg) scale(.30);
     }
     87.5% {
@@ -1010,7 +1020,7 @@ label {
     }
     100% {
         top: 230px;
-        left:30px;
+        left: 30px;
         transform: rotate(30deg) rotate(200deg) scale(.30);
     }
 }
@@ -1024,7 +1034,7 @@ label {
         transform: rotate(40deg) rotate(20deg) scale(.30);
     }
     12.5% {
-        top: 245px;
+        top: 250px;
         left: 35px;
         transform: rotate(35deg) rotate(20deg) scale(.30);
     }
@@ -1069,12 +1079,12 @@ label {
 }
 @keyframes leg3c35 {
     0% {
-        top: 275px;
-        left: 10px;
-        transform: rotate(10deg) rotate(190deg) scale(.35);
+        top: 280px;
+        left: 5px;
+        transform: rotate(30deg) rotate(190deg) scale(.35);
     }
     12.5% {
-        top: 270px;
+        top: 280px;
         left: 50px;
         transform: rotate(0deg) rotate(190deg) scale(.35);
     }
@@ -1109,9 +1119,9 @@ label {
         transform: rotate(-10deg) rotate(190deg) scale(.35);
     }
     100% {
-        top: 275px;
-        left: 10px;
-        transform: rotate(10deg) rotate(190deg) scale(.35);
+        top: 280px;
+        left: 5px;
+        transform: rotate(30deg) rotate(190deg) scale(.35);
     }
 }
 
@@ -1141,7 +1151,7 @@ label {
         transform: rotate(0deg) rotate(-80deg) scale(.45);
     }
     50% {
-        top: 230px;
+        top: 240px;
         left: 60px;
         transform: rotate(0deg) rotate(-80deg) scale(.45);
     }
@@ -1191,7 +1201,7 @@ label {
         transform: rotate(-10deg) rotate(90deg) scale(.35);
     }
     50% {
-        top: 230px;
+        top: 240px;
         left: 20px;
         transform: rotate(20deg) rotate(90deg) scale(.35);
     }
@@ -1241,7 +1251,7 @@ label {
         transform: rotate(20deg) rotate(160deg) scale(.30);
     }
     50% {
-        top: 255px;
+        top: 265px;
         left: 5px;
         transform: rotate(70deg) rotate(160deg) scale(.30);
     }
