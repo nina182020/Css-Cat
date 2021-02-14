@@ -8,14 +8,49 @@
 </head>
 <body>
 
-    <header>Life...</header>
-    <div class="corner">What size cat would you like giant cat regular sized cat or pocket sized cat.</div>
+    <header>Cat</header>
+    <hr>
+    
     <div class="box"></div>
-     <div class="container">
+    
+    <div class="customization" id="customization">
+
+        <div>
+            <label>Cat size:</label>
+            <input type="radio" name="catSize" id="giantSizedCat" value="giantSizedCat">
+            <label for="giantSizedCat">Giant Sized Cat</label>
+            <input type="radio" name="catSize" id="regularSizedCat" value="regularSizedCat" checked>
+            <label for="regularSizedCat">Regular Sized Cat</label>
+            <input type="radio" name="catSize" id="pocketSized" value="pocketSizedCat">
+            <label for="pocketSizedCat">Pocket Sized Cat</label>
+        </div>
+
+        <div>
+            <label>Cat animations:</label>
+            <input type="radio" name="catAnimation" id="none" value="none" checked>
+            <label for="none">None</label>
+            <input type="radio" name="catAnimation" id="all" value="all">
+            <label for="all">All</label>
+            <input type="radio" name="catAnimation" id="leg1" value="leg1">
+            <label for="leg1">Leg 1</label>
+            <input type="radio" name="catAnimation" id="leg2" value="leg2">
+            <label for="leg2">Leg 2</label>
+            <input type="radio" name="catAnimation" id="leg3" value="leg3">
+            <label for="leg3">Leg 3</label>
+            <input type="radio" name="catAnimation" id="leg4" value="leg4">
+            <label for="leg4">Leg 4</label>
+            <input type="radio" name="catAnimation" id="tail" value="tail">
+            <label for="tail">Tail</label> 
+        </div>
+
+    </div>
+
+
+    <div class="container">
    
         <div class="set"></div>
         
-        <div class="cat">
+        <div class="cat" id="cat">
             <div class="piece"></div>
             <div class="piece"></div>
             <div class="piece"></div>
