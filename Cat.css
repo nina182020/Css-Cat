@@ -1,6 +1,8 @@
 :root {
     --shadow : rgb(255, 255, 255);
     --solid : rgb(17, 63, 87);
+    --catTranslate : 800px;
+    --catDuration : 10s;
     --catScaleAnimation : 1;
 }
 * {
@@ -23,10 +25,10 @@ hr {
 }
 .set {
     position: absolute;
-    top: 200px;
+    top: 180px;
     left: 150px;
     width: 60%;
-    height: 60%;
+    height: 440px;
     border-left: 45px solid transparent;
     border-right: 45px solid transparent;
     border-bottom: 45px solid rgb(10, 22, 41);
@@ -58,15 +60,29 @@ hr {
     text-align: center;
     line-height: 25px;
 }
+.meow {
+    position: absolute;
+    display: none;
+    background-color: rgb(96, 103, 114);
+    padding: 5px;
+}
 .customization {
+    z-index: 4;
     position: absolute;
     bottom: 10px;
     right: 90px;
     background-color: rgb(15, 63, 75);
     padding: 5px 10px;
-}
-label {
     font-size: 14px;
+}
+#customizeBtn {
+    z-index: 5;
+}
+#customization {
+    display: none;
+}
+#changeColors > div {
+    display: inline-block;
 }
 .cat {
     position: absolute;
@@ -361,11 +377,11 @@ label {
 
     /* cat animation*/
 .cat {
-    animation: cat 8s linear infinite;
+    animation: cat var(--catDuration) linear infinite;
 }
 @keyframes cat {
     100% {
-        transform: translateX(600px) scale(var(--catScaleAnimation));
+        transform: translateX(var(--catTranslate)) scale(var(--catScaleAnimation));
     }
 }
 

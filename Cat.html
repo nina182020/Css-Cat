@@ -11,10 +11,13 @@
     <header>Cat</header>
     <hr>
     
-    <div class="box" onclick="addSolidPiece()"></div>
+    <div class="box" onclick="addSolidPiece(), sayMeow()"></div>
+    <div class="meow" id="meow">Meow!</div>
+
+    <div class="customization" id="customizeBtn" onclick="showCustomization()">Customize meow</div>
     
     <div class="customization" id="customization">
-
+        
         <div>
             <label>Cat size:</label>
             <input type="radio" name="catSize" id="giantSizedCat" value="giantSizedCat">
@@ -43,12 +46,18 @@
             <label for="tail">Tail</label> 
         </div>
 
+        <div id="changeColors">
+            <div id="borderColor">Change border color: </div>
+            <input type="color" id="pickBorderColor">
+            <div id="mainColor">Change main color: </div>
+            <input type="color" id="pickMainColor">
+        </div>
     </div>
 
 
     <div class="container">
    
-        <div class="set"></div>
+        <div class="set" id="set"></div>
         
         <div class="cat" id="cat">
             <div class="piece"></div>

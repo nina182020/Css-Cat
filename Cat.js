@@ -19,6 +19,7 @@ function sizeInput() {
             break;
     };
 };
+let set = document.getElementById('set');
 function scaleCat(catSize, catPosition) {
     cat.style.transform = `scale(${catSize})`;
     cat.style.bottom = `${catPosition}px`;
@@ -85,6 +86,34 @@ function addSolidPiece() {
     };
 };
 
+let pickBorderColor = document.getElementById('pickBorderColor');
+pickBorderColor.addEventListener('input', changeBorderColor);
+function changeBorderColor() {
+    document.documentElement.style.setProperty('--shadow', `${pickBorderColor.value}`);
+};
+let pickMainColor = document.getElementById('pickMainColor');
+pickMainColor.addEventListener('input', changeMainColor);
+function changeMainColor() {
+    document.documentElement.style.setProperty('--solid', `${pickMainColor.value}`);
+};
+
+let customizeBtn = document.getElementById('customizeBtn');
+customization.style.display = 'none';
+function showCustomization() {
+    let customizationDisplay = customization.style.display;
+    customization.style.display = (customizationDisplay == 'none')? 'block' : 'none';
+    let hide = customizeBtn.innerHTML;
+    customizeBtn.innerHTML = (hide == 'Customize meow')? 'Hide meow' : 'Customize meow';
+};
+
+let meow = document.getElementById('meow');
+function sayMeow() {
+    meow.style.top = `${cat.offsetTop + 40}px`;
+    meow.style.left = `${cat.offsetLeft + 240}px`;
+    meow.style.display = 'block'
+};
+
+
 
 
 for (let i = 0; i < 44; i++) {
@@ -96,6 +125,3 @@ function resetPosition() {
         piece[i].style.top = '0px';
     };
 };
-
-
-
