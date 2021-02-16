@@ -1,8 +1,8 @@
 :root {
     --shadow : rgb(255, 255, 255);
-    --solid : rgb(17, 63, 87);
-    --catTranslate : 800px;
-    --catDuration : 10s;
+    --solidPieceColor : rgb(17, 63, 87);
+    --catTranslate : 1200px;
+    --catDuration : 12s;
     --catScaleAnimation : 1;
 }
 * {
@@ -25,7 +25,7 @@ hr {
 }
 .set {
     position: absolute;
-    top: 180px;
+    bottom: 100px;
     left: 150px;
     width: 60%;
     height: 440px;
@@ -41,31 +41,6 @@ hr {
     background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
-.box {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.623);
-}
-.box::before {
-    position: absolute;
-    content: 'Click me!';
-    top: 10px;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background-color: rgba(54, 179, 166, 0.7);
-    text-align: center;
-    line-height: 25px;
-}
-.meow {
-    position: absolute;
-    display: none;
-    background-color: rgb(96, 103, 114);
-    padding: 5px;
-}
 .customization {
     z-index: 4;
     position: absolute;
@@ -76,7 +51,8 @@ hr {
     font-size: 14px;
 }
 #customizeBtn {
-    z-index: 5;
+    z-index: 6;
+    font-weight: bold;
 }
 #customization {
     display: none;
@@ -86,25 +62,73 @@ hr {
 }
 .cat {
     position: absolute;
-    bottom: 440px;
+    bottom: 100px;
     left: 150px;
+    width: 400px;
+    height: 350px;
+    transform-origin: bottom left;
 }
 .cat > .piece {
     z-index: 10;
 }
 
-    /* box click me */
-.box:hover::before {
+    /* click meow  box*/
+#clickMeowBox {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+#clickMeowBox::before {
+    position: absolute;
+    content: 'Click meow!';
+    top: 10px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(54, 179, 166, 0.7);
+    text-align: center;
+    line-height: 25px;
+}
+#clickMeowBox:hover::before {
     color: rgb(88, 24, 12);
     font-weight: 900;
 }
-.box:active::before {
+#clickMeowBox:active::before {
     transform: translateY(-10px);
-    transition: transform .2s;
 }
+
+    /* meow popup */
+.meow {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: rgb(115, 129, 158);
+    opacity: 0;
+    padding: 5px;
+    font-size: 18px;
+}
+.animateMeow {
+    animation: meowPopup 2s forwards;
+}
+@keyframes meowPopup {
+    0% {
+        opacity: 0;
+    }
+    10%, 70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .piece:hover {
     box-shadow: 0px 0px 10px 0px rgba(64, 224, 208, 0);
 }
+
     /* cat pieces */
 .piece {
     position: absolute;
@@ -131,7 +155,7 @@ hr {
 .solidPiece {
     width: 81px;
     height: 70px;
-    border-right: 71px solid var(--solid);
+    border-right: 71px solid var(--solidPieceColor);
     border-bottom: 71px solid transparent;
 }
 
@@ -1594,4 +1618,3 @@ hr {
         transform: rotate(-30deg) rotate(30deg) scale(.4);
     }
 }
-

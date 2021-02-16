@@ -9,20 +9,18 @@ function sizeInput() {
     let sizeInput = document.querySelector('input[name="catSize"]:checked').value;
     switch(sizeInput) {
         case 'giantSizedCat':
-            scaleCat(1.5, 600);
+            scaleCat(1.5);
             break;
         case 'regularSizedCat':
-            scaleCat(1, 440);
+            scaleCat(1);
             break;
         case 'pocketSizedCat':
-            scaleCat(.5, 270);
+            scaleCat(.5);
             break;
     };
 };
-let set = document.getElementById('set');
-function scaleCat(catSize, catPosition) {
+function scaleCat(catSize) {
     cat.style.transform = `scale(${catSize})`;
-    cat.style.bottom = `${catPosition}px`;
     cat.style.setProperty('--catScaleAnimation', `${catSize}`);
 };
 
@@ -75,7 +73,6 @@ function pawsCat() {
         cat.style.animation = 'paused';
     };
 };
-
 pawsCat();
 
 function addSolidPiece() {
@@ -94,7 +91,7 @@ function changeBorderColor() {
 let pickMainColor = document.getElementById('pickMainColor');
 pickMainColor.addEventListener('input', changeMainColor);
 function changeMainColor() {
-    document.documentElement.style.setProperty('--solid', `${pickMainColor.value}`);
+    document.documentElement.style.setProperty('--solidPieceColor', `${pickMainColor.value}`);
 };
 
 let customizeBtn = document.getElementById('customizeBtn');
@@ -108,17 +105,17 @@ function showCustomization() {
 
 let meow = document.getElementById('meow');
 function sayMeow() {
-    meow.style.top = `${cat.offsetTop + 40}px`;
-    meow.style.left = `${cat.offsetLeft + 240}px`;
-    meow.style.display = 'block'
+    meow.classList.toggle('animateMeow');
+    setTimeout(() => {
+        if (meow.classList.contains('animateMeow')) {
+            meow.classList.remove('animateMeow');
+        };   
+    }, 2000);
 };
 
 
 
 
-for (let i = 0; i < 44; i++) {
-    piece[i].style.opacity = '1';
-};
 function resetPosition() {
     for (let i = 20; i < 44; i++) {
         piece[i].style.left = '0px';
